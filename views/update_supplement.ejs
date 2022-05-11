@@ -1,0 +1,70 @@
+<!-- include header -->
+<%-include('include/_header')%>
+<!-- /include header -->
+
+    <!--Main Site-->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="/"><i class="fa-solid fa-angles-left"></i> All Supplements</a>
+                </div>
+            </div>
+
+            <div class="form-title text-center">
+                <h2 class="text-dark">Update Supplement</h2>
+                <span class="text-light">Use the below form to update the supplement</span>
+            </div>
+            <!--add supplements form-->
+            <!--form handling-->
+<form method="POST" id="update_supplement">
+    <div class="new_supplement">
+        <div class="form-group">
+            <label for="name" class="text-light">Name </label>
+            <input type="hidden" name="id" value="<%=supplement.name%>">
+            <input type="text" name="name" value="<%=supplement.name%>" placeholder="Amaino">
+        </div>
+
+        <div class="form-group">
+            <label for="price" class="text-light">Price Rs </label>
+            <input type="number" min="0" max="10000" name="price" value="<%=supplement.price%>" placeholder="Amount">
+        </div>
+
+        <div class="form-group">
+            <label for="category" class="text-light">Category </label>
+
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="category" value="Caffeine" <%= supplement.category == 'Caffeine' ? 'checked' : '' %>>
+                <label for="radio-2" class="radio-label">Caffeine</label>
+            </div>
+            
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="category" value="Creatine" <%= supplement.category == 'Creatine' ? 'checked' : '' %>>
+                <label for="radio-3" class="radio-label">Creatine</label>
+            </div>
+
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="category" value="Protein" <%= supplement.category == 'Protein' ? 'checked' : '' %>>
+                <label for="radio-4" class="radio-label">Protein</label>
+            </div>
+
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="category" value="Pre-workout" <%= supplement.category == 'Pre-workout' ? 'checked' : '' %>>
+                <label for="radio-5" class="radio-label">Pre-workout</label>
+            </div>
+                                    
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+        
+    </div>
+</form>
+        </div>
+    </main>
+    <!--/Main Site-->
+
+<!-- include footer -->
+<%-include('include/_footer')%>
+<!-- /include footer -->

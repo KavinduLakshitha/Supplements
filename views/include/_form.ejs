@@ -1,0 +1,45 @@
+<!--form handling-->
+<form action="/api/supplements" method="POST" id="add_supplement">
+    <div class="new_supplement">
+        <div class="form-group">
+            <label for="name" class="text-light">Name </label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="name" value="" placeholder="Amaino">
+        </div>
+
+        <div class="form-group">
+            <label for="price" class="text-light">Price Rs </label>
+            <input type="number" min="0" max="10000" name="price" value="" placeholder="1000">
+        </div>
+
+        <div class="form-group">
+            <label for="category" class="text-light">Category </label>
+
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="category" value="Caffeine">
+                <label for="radio-2" class="radio-label">Caffeine</label>
+            </div>
+            
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="category" value="Caffeine">
+                <label for="radio-3" class="radio-label">Creatine</label>
+            </div>
+
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="category" value="Protein">
+                <label for="radio-4" class="radio-label">Protein</label>
+            </div>
+
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="category" value="Protein">
+                <label for="radio-5" class="radio-label">Pre-workout</label>
+            </div>
+                                    
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+        
+    </div>
+</form>
